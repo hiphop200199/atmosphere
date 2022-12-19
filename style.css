@@ -1,78 +1,110 @@
+:root {
+  --backgroundImageWave:url(./wave.svg);
+  --backgroundImageDam:url(./dambg.svg);
+  --backgroundImageAur:url(./aurora-1197753_1920.jpg);
+  --backgroundImageSno:url(./winter-landscape-2571788_1920.jpg);
+  --backgroundImageFlo:url(./woman-1509956_1920.jpg);
+  --titleColorDef:rgb(58, 55, 55);
+  --titleColorDam:rgb(255, 234, 6);
+  --titleColorAur:rgb(161, 255, 213);
+  --titleColorSno:rgb(18, 161, 227);
+  --titleColorFlo:rgb(255, 85, 136);
+  --contentBackgroundColor:rgba(224, 224, 224, 0.01);
+  --contentBoxShadow:5px 10px 15px rgba(170, 170, 170, 0.25);
+  --fontFamily:"Playfair Display SC";
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Playfair Display SC";
+  font-family: var(--fontFamily);
 }
 
-body {
+body, body .web-container {
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   min-height: 100vh;
-  width: 100%;
-  min-height: 100%;
 }
-body .container {
+body .web-container {
   position: relative;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url(./wave.svg);
+  background-image: var(--backgroundImageWave);
   background-size: cover;
 }
-body ul {
+body .web-container.dam {
+  background-image: var(--backgroundImageDam);
+}
+body .web-container.aurora {
+  background-image: var(--backgroundImageAur);
+}
+body .web-container.snowman {
+  background-image: var(--backgroundImageSno);
+}
+body .web-container.flower-ring {
+  background-image: var(--backgroundImageFlo);
+}
+body .web-mylist {
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body h1 {
+body #web-title {
   margin-bottom: 20px;
   font-size: 50px;
   font-weight: 600;
-  color: rgb(188, 188, 188);
+  color: var(--titleColorDef);
   background: rgba(224, 224, 224, 0.01);
-  border-radius: 50px;
+  border-radius: 100vmax;
   padding: 20px;
-  box-shadow: 5px 10px 15px rgba(170, 170, 170, 0.25);
-  -webkit-text-stroke: 1px rgba(253, 253, 253, 0.25);
+  box-shadow: var(--contentBoxShadow);
   transition: 1s;
   filter: blur(2px);
 }
-body h1:hover {
-  color: rgb(135, 135, 135);
+body #web-title:hover {
+  color: var(--titleColorDef);
   scale: 105%;
   filter: blur(0px);
 }
-body .mypic {
-  margin-top: 10px;
-  margin-bottom: 10px;
+body #web-title.dam {
+  color: var(--titleColorDam);
 }
-body svg {
+body #web-title.aurora {
+  color: var(--titleColorAur);
+}
+body #web-title.snowman {
+  color: var(--titleColorSno);
+}
+body #web-title.flower-ring {
+  color: var(--titleColorFlo);
+}
+body .web-mypic {
+  margin: 5% 0%;
+}
+body svg, body .web-container svg {
   cursor: pointer;
   transition: 1s;
 }
 body svg:hover {
   filter: blur(3px);
 }
-body .paragraph {
+body .web-paragraph {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 300px;
-  border-radius: 10px;
+  width: 55ch;
+  border-radius: 10%;
   background: rgba(170, 170, 170, 0.066);
   box-shadow: 1px 3px 15px rgba(170, 170, 170, 0.178);
   margin: 30px;
   padding: 10px;
 }
-body .paragraph p {
+body .web-paragraph p {
   position: absolute;
   cursor: pointer;
   -webkit-border-before: 10px solid;
