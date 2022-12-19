@@ -10,7 +10,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   min-height: 100vh;
+  width: 100%;
+  min-height: 100%;
 }
 body .container {
   position: relative;
@@ -19,20 +22,15 @@ body .container {
   justify-content: center;
   align-items: center;
   background-image: url(./wave.svg);
-  background-size: 150%;
-  background-position: 0%;
-  width: 100%;
-  min-height: 100vh;
-  -webkit-animation: bgmove 20s linear infinite alternate;
-          animation: bgmove 20s linear infinite alternate;
+  background-size: cover;
 }
-body .container ul {
+body ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .container h1 {
+body h1 {
   margin-bottom: 20px;
   font-size: 50px;
   font-weight: 600;
@@ -45,69 +43,23 @@ body .container h1 {
   transition: 1s;
   filter: blur(2px);
 }
-body .container h1:hover {
+body h1:hover {
   color: rgb(135, 135, 135);
   scale: 105%;
   filter: blur(0px);
 }
-body .container .bubble, body .container .bubble:nth-child(5), body .container .bubble:nth-child(4), body .container .bubble:nth-child(3), body .container .bubble:nth-child(2) {
-  position: absolute;
-  top: 500px;
-  left: 600px;
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-  border: 1px solid rgba(223, 223, 223, 0.26);
-  border-radius: 62% 38% 60% 40%/55% 58% 42% 45%;
-  background: rgba(255, 253, 253, 0.079);
-  -webkit-animation: move 20s linear infinite alternate;
-          animation: move 20s linear infinite alternate;
-  box-shadow: 3px 5px 10px rgba(170, 170, 170, 0.178);
-}
-body .container .bubble:nth-child(2) {
-  width: 50px;
-  height: 50px;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-duration: 15s;
-          animation-duration: 15s;
-}
-body .container .bubble:nth-child(3) {
-  width: 150px;
-  height: 150px;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-}
-body .container .bubble:nth-child(4) {
-  width: 120px;
-  height: 120px;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-}
-body .container .bubble:nth-child(5) {
-  width: 160px;
-  height: 160px;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-duration: 11s;
-          animation-duration: 11s;
-}
-body .container .mypic {
+body .mypic {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-body .container svg {
+body svg {
   cursor: pointer;
   transition: 1s;
 }
-body .container svg:hover {
+body svg:hover {
   filter: blur(3px);
 }
-body .container .paragraph {
+body .paragraph {
   position: relative;
   display: flex;
   justify-content: center;
@@ -120,7 +72,7 @@ body .container .paragraph {
   margin: 30px;
   padding: 10px;
 }
-body .container .paragraph p {
+body .paragraph p {
   position: absolute;
   cursor: pointer;
   -webkit-border-before: 10px solid;
@@ -131,48 +83,4 @@ body .container .paragraph p {
   color: rgb(182, 182, 182);
   border-image-slice: 1;
   font-size: 18px;
-  -webkit-animation: convert 2s linear infinite alternate;
-          animation: convert 2s linear infinite alternate;
-}
-@-webkit-keyframes bgmove {
-  0%, 100% {
-    background-position: 0%;
-  }
-  50% {
-    background-position: -500px;
-  }
-}
-@keyframes bgmove {
-  0%, 100% {
-    background-position: 0%;
-  }
-  50% {
-    background-position: -500px;
-  }
-}
-@-webkit-keyframes move {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-300px);
-  }
-}
-@keyframes move {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-300px);
-  }
-}
-@-webkit-keyframes convert {
-  to {
-    border-image-source: linear-gradient(0deg, rgb(122, 251, 255), rgb(173, 255, 255), rgb(26, 243, 189));
-  }
-}
-@keyframes convert {
-  to {
-    border-image-source: linear-gradient(0deg, rgb(122, 251, 255), rgb(173, 255, 255), rgb(26, 243, 189));
-  }
 }/*# sourceMappingURL=style.css.map */

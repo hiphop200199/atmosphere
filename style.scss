@@ -1,4 +1,5 @@
-@use "sass:math";
+$background:url(./wave.svg);
+
 
 * {
     padding: 0;
@@ -12,6 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width:100vw;
     min-height: 100vh;
 
     .container {
@@ -20,12 +22,15 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url(./wave.svg);
-        background-size: 150%;
-        background-position: 0%;
+       background-image: $background;
+        background-size:cover;
+
+        }
+        
+      
         width: 100%;
-        min-height: 100vh;
-        animation: bgmove 20s linear infinite alternate;
+        min-height: 100%;
+        
 
         ul {
             list-style-type: none;
@@ -54,51 +59,7 @@ body {
             }
         }
 
-        .bubble {
-            position: absolute;
-            top: 500px;
-            left: 600px;
-            width: 100px;
-            height: 100px;
-            cursor: pointer;
-            border: 1px solid rgba(223, 223, 223, 0.26);
-            border-radius: 62% 38% 60% 40% / 55% 58% 42% 45%;
-            background: rgba(255, 253, 253, 0.079);
-            animation: move 20s linear infinite alternate;
-            box-shadow: 3px 5px 10px rgba(170, 170, 170, 0.178);
-
-            &:nth-child(2) {
-                @extend .bubble;
-                width: 50px;
-                height: 50px;
-                animation-delay: 2s;
-                animation-duration: 15s;
-            }
-
-            &:nth-child(3) {
-                @extend .bubble;
-                width: 150px;
-                height: 150px;
-                animation-delay: 1s;
-                animation-duration: 10s;
-            }
-
-            &:nth-child(4) {
-                @extend .bubble;
-                width: 120px;
-                height: 120px;
-                animation-delay: 1s;
-                animation-duration: 8s;
-            }
-
-            &:nth-child(5) {
-                @extend .bubble;
-                width: 160px;
-                height: 160px;
-                animation-delay: 1.5s;
-                animation-duration: 11s;
-            }
-        }
+            
 
         .mypic {
             margin-top: 10px;
@@ -137,38 +98,14 @@ body {
                 color: rgb(182, 182, 182);
                 border-image-slice: 1;
                 font-size: 18px;
-                animation: convert 2s linear infinite alternate;
+               
             }
         }
     }
 
-    @keyframes bgmove {
+ 
+   
 
-        0%,
-        100% {
-            background-position: 0%;
-        }
+ 
 
-        50% {
-            background-position: -500px;
-        }
-    }
-
-    @keyframes move {
-
-        0%,
-        100% {
-            transform: translateY(0px);
-        }
-
-        50% {
-            transform: translateY(-300px);
-        }
-    }
-
-    @keyframes convert {
-        to {
-            border-image-source: linear-gradient(0deg, rgb(122, 251, 255), rgb(173, 255, 255), rgb(26, 243, 189));
-        }
-    }
-}
+  
