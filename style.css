@@ -1,9 +1,9 @@
 :root {
   --backgroundImageWave:url(./wave.svg);
   --backgroundImageDam:url(./dambg.svg);
-  --backgroundImageAur:url(./aurora-1197753_1920.jpg);
-  --backgroundImageSno:url(./winter-landscape-2571788_1920.jpg);
-  --backgroundImageFlo:url(./woman-1509956_1920.jpg);
+  --backgroundImageAur:url(./aurora.jpg);
+  --backgroundImageSno:url(./winter.jpg);
+  --backgroundImageFlo:url(./woman.jpg);
   --titleColorDef:rgb(58, 55, 55);
   --titleColorDam:rgb(255, 234, 6);
   --titleColorAur:rgb(161, 255, 213);
@@ -37,6 +37,7 @@ body .web-container {
 }
 body .web-container.dam {
   background-image: var(--backgroundImageDam);
+  background-size: auto;
 }
 body .web-container.aurora {
   background-image: var(--backgroundImageAur);
@@ -62,6 +63,10 @@ body #web-title {
   border-radius: 100vmax;
   padding: 20px;
   box-shadow: var(--contentBoxShadow);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   transition: 1s;
   filter: blur(2px);
 }
@@ -84,6 +89,7 @@ body #web-title.flower-ring {
 }
 body .web-mypic {
   margin: 5% 0%;
+  cursor: pointer;
 }
 body svg, body .web-container svg {
   cursor: pointer;
@@ -97,22 +103,12 @@ body .web-paragraph {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55ch;
+  width: 50ch;
+  letter-spacing: 0.1vw;
   border-radius: 10%;
-  background: rgba(170, 170, 170, 0.066);
-  box-shadow: 1px 3px 15px rgba(170, 170, 170, 0.178);
-  margin: 30px;
-  padding: 10px;
-}
-body .web-paragraph p {
-  position: absolute;
-  cursor: pointer;
-  -webkit-border-before: 10px solid;
-          border-block-start: 10px solid;
-  -webkit-border-start: 9px solid;
-          border-inline-start: 9px solid;
-  border-image-source: linear-gradient(210deg, rgb(122, 251, 255), rgb(173, 255, 255), rgb(219, 255, 254));
-  color: rgb(182, 182, 182);
-  border-image-slice: 1;
-  font-size: 18px;
+  text-overflow: clip;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=style.css.map */
