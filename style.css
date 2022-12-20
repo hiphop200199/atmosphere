@@ -37,7 +37,6 @@ body .web-container {
 }
 body .web-container.dam {
   background-image: var(--backgroundImageDam);
-  background-size: auto;
 }
 body .web-container.aurora {
   background-image: var(--backgroundImageAur);
