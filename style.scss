@@ -21,6 +21,7 @@
     font-family: var(--fontFamily);
 }
 body {
+    position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -29,7 +30,11 @@ body {
     min-height: 100vh;
 
     & .web-container {
-        @extend body;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
         position: relative;
         flex-direction: column;
        background-image: var(--backgroundImageWave);
