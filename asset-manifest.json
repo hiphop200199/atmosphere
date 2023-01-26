@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/atmosphere/static/css/main.9ff896e3.css",
+    "main.js": "/atmosphere/static/js/main.a8bc1bd3.js",
+    "index.html": "/atmosphere/index.html",
+    "main.9ff896e3.css.map": "/atmosphere/static/css/main.9ff896e3.css.map",
+    "main.a8bc1bd3.js.map": "/atmosphere/static/js/main.a8bc1bd3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ff896e3.css",
+    "static/js/main.a8bc1bd3.js"
+  ]
+}
